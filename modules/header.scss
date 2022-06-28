@@ -1,0 +1,136 @@
+@use "./../partials/palette";
+@use "./../partials/devices";
+
+header {
+    align-items: center;
+    width: 100%;
+    position: fixed;
+
+    @include devices.phone {
+        display: block;
+    }
+
+    @include devices.large-phone {
+        display: block;
+    }
+
+    @include devices.tablet {
+        display: flex;
+        justify-content: space-between;
+        height: 13%;
+    }
+}
+
+.logo {
+    width: 60px;
+
+    @include devices.phone {
+        margin: 20px auto;
+        height: 60px;
+    }
+
+    @include devices.large-phone {
+        margin: 20px auto;
+        height: 60px;
+    }
+
+    @include devices.tablet {
+        margin: 0;
+        margin-left: 20px;
+        height: 100%;
+    }
+
+    &__link {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-image: url(/images/logo_colour.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:hover {
+            background-image: url(/images/logo_colour2.svg);
+        }
+    }
+}
+
+.nav {
+    @include devices.phone {
+        width: 100%;
+    }
+
+    @include devices.large-phone {
+        width: 100%;
+    }
+
+    @include devices.tablet {
+        width: calc(100% / 12 * 6);
+        height: 100%;
+        margin-right: 20px;
+    }
+
+    @include devices.laptop {
+        width: calc(100% / 12 * 4);
+        height: 100%;
+        margin-right: 20px;
+    }
+
+    @include devices.desktop {
+        width: calc(100% / 12 * 3);
+        height: 100%;
+        margin-right: 20px;
+    }
+
+    li {
+        width: calc(100% / 3);
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        height: 100%;
+    }
+
+    &__item {
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 5%;
+
+        &:link {
+            text-decoration: none;
+            color: palette.$primary-color;
+            transition: 0.2s;
+        }
+
+        @include devices.laptop {
+            &:hover {
+                border-bottom: 2px solid palette.$accent-color;
+                color: palette.$accent-color;
+            }
+
+            &:active {
+                color: palette.$accent-color;
+            }
+
+            &:visited {
+                color: palette.$primary-color;
+            }
+        }
+    }
+}
+
+.menu {
+    @include devices.phone {
+        background-image: url(/images/bars-solid.svg);
+        width: 60px;
+        height: 60px;
+        background-size: 45px 45px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
