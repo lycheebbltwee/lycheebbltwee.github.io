@@ -1,14 +1,30 @@
 @use "./../partials/palette";
+@use "./../partials/headings";
 
 * {
     font-family: interstate-mono, monospace;
     font-weight: 300;
     font-style: normal;
-    font-size: 16px;
+    font-size: 18px;
 }
 
-h1 {
+.topheading {
     font-family: quincy-cf, serif;
     font-weight: 800;
     font-style: normal;
+    color: palette.$primary-color;
+    font-size: 140px;
+    line-height: 0.8em;
+}
+
+.top__para {
+    color: palette.$primary-color;
+}
+
+.top__list {
+    color: palette.$primary-color;
+}
+
+.subheading {
+    @include headings.two-tone;
 }

@@ -7,13 +7,36 @@
   font-family: interstate-mono, monospace;
   font-weight: 300;
   font-style: normal;
-  font-size: 16px;
+  font-size: 18px;
 }
 
-h1 {
+.topheading {
   font-family: quincy-cf, serif;
   font-weight: 800;
   font-style: normal;
+  color: #e72348;
+  font-size: 140px;
+  line-height: 0.8em;
+}
+
+.top__para {
+  color: #e72348;
+}
+
+.top__list {
+  color: #e72348;
+}
+
+.subheading {
+  font-family: quincy-cf, serif;
+  font-weight: 800;
+  font-style: none;
+  color: #e72348;
+  font-size: 75px;
+  line-height: 0.9em;
+}
+.subheading--accent-color {
+  color: #494354;
 }
 
 html {
@@ -69,12 +92,6 @@ header {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background-image: url(/images/logo_colour.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.logo__link:hover {
-  background-image: url(/images/logo_colour2.svg);
 }
 
 @media only screen and (max-width: 600px) {
@@ -122,9 +139,9 @@ header {
 }
 .nav__item {
   display: inline-block;
-  text-align: center;
-  box-sizing: border-box;
+  vertical-align: top;
   padding: 5%;
+  border-bottom: 2px solid transparent;
 }
 .nav__item:link {
   text-decoration: none;
@@ -132,15 +149,15 @@ header {
   transition: 0.2s;
 }
 @media only screen and (min-width: 992px) {
-  .nav__item:hover {
-    border-bottom: 2px solid #494354;
-    color: #494354;
+  .nav__item:visited {
+    color: #e72348;
   }
   .nav__item:active {
     color: #494354;
   }
-  .nav__item:visited {
-    color: #e72348;
+  .nav__item:hover {
+    border-bottom: 2px solid #494354;
+    color: #494354;
   }
 }
 
@@ -153,4 +170,10 @@ header {
     background-position: center;
     background-repeat: no-repeat;
   }
+}
+
+#currentPage {
+  border-bottom: 2px solid #494354;
+  color: #494354;
+  padding: 5%;
 }

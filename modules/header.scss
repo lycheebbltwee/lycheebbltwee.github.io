@@ -44,13 +44,6 @@ header {
         display: inline-block;
         width: 100%;
         height: 100%;
-        background-image: url(/images/logo_colour.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-
-        &:hover {
-            background-image: url(/images/logo_colour2.svg);
-        }
     }
 }
 
@@ -97,9 +90,9 @@ header {
 
     &__item {
         display: inline-block;
-        text-align: center;
-        box-sizing: border-box;
+        vertical-align: top;
         padding: 5%;
+        border-bottom: 2px solid transparent;
 
         &:link {
             text-decoration: none;
@@ -108,17 +101,17 @@ header {
         }
 
         @include devices.laptop {
-            &:hover {
-                border-bottom: 2px solid palette.$accent-color;
-                color: palette.$accent-color;
+            &:visited {
+                color: palette.$primary-color;
             }
 
             &:active {
                 color: palette.$accent-color;
             }
 
-            &:visited {
-                color: palette.$primary-color;
+            &:hover {
+                border-bottom: 2px solid palette.$accent-color;
+                color: palette.$accent-color;
             }
         }
     }
@@ -133,4 +126,10 @@ header {
         background-position: center;
         background-repeat: no-repeat;
     }
+}
+
+#currentPage {
+    border-bottom: 2px solid palette.$accent-color;
+    color: palette.$accent-color;
+    padding: 5%;
 }
