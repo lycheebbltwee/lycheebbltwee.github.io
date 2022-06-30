@@ -1,0 +1,125 @@
+@use "./../partials/palette";
+@use "./../partials/devices";
+@use "./../partials/sectionsflex";
+
+//
+// TOP SECTION
+.top {
+    // Padding-top to move away from top of page
+    padding-top: 11.25rem;
+
+    // Div widths
+    @include sectionsflex.div(60%, 30%);
+
+    // Left side of section
+    &__left-div {
+        @include devices.tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__para {
+        @include devices.tablet {
+            margin-bottom: 5rem;
+        }
+    }
+
+    // Right side of section
+    &__img {
+        height: 40.6rem;
+        margin: -2.5rem auto 0;
+    }
+}
+
+// Styling for heading
+.topheading {
+    @include devices.phone {
+        height: 11.25rem;
+    }
+
+    &__img {
+        @include devices.phone {
+            visibility: hidden;
+        }
+
+        @include devices.large-phone {
+            visibility: hidden;
+        }
+
+        @include devices.tablet {
+            visibility: visible;
+            height: 4.07rem;
+        }
+
+        @include devices.laptop {
+            &:hover {
+                transform: rotate(10deg);
+            }
+        }
+    }
+}
+
+//
+// ABOUT SECTION
+.about {
+    background-color: palette.$tint-lightest;
+
+    @include devices.tablet {
+        height: 25.625rem;
+    }
+
+    @include sectionsflex.div(60%, 30%);
+
+    // Left side of section
+    &__left-div {
+        @include devices.tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+    }
+
+    &__para {
+        @include devices.tablet {
+            margin-bottom: 3.75rem;
+        }
+    }
+
+    &__btn {
+        &:hover {
+            background-color: palette.$tint-light;
+        }
+    }
+
+    // Right side of section
+    &__right-div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    &__img {
+        height: 5.625rem;
+    }
+}
+
+//
+// PROJECTS SECTION
+.projects {
+    background-color: palette.$tint-light;
+    display: block;
+    padding: 5rem 5%;
+
+    &__gallery {
+        display: flex;
+        justify-content: space-around;
+        margin: 2.2rem 0 3.75rem;
+    }
+
+    &__img {
+        width: 45%;
+    }
+}

@@ -1,0 +1,47 @@
+@use "./../partials/palette";
+
+.btn {
+    background-color: palette.$accent-color;
+    color: palette.$lightest;
+    border: none;
+    border-radius: 50px;
+
+    height: 70px;
+    width: 320px;
+    transition: 0.2s;
+
+    &:link {
+        color: palette.$lightest;
+    }
+
+    &:visited {
+        color: palette.$lightest;
+    }
+
+    &:hover {
+        background-color: palette.$tint-lightest;
+    }
+
+    &__link {
+        padding: 25px 52px;
+        border-radius: 25px;
+        font-size: 22px;
+        transition: 0.2s;
+
+        &:link {
+            color: palette.$lightest;
+        }
+
+        &:visited {
+            color: palette.$lightest;
+        }
+
+        &:hover {
+            color: palette.$accent-color;
+        }
+
+        &:active {
+            color: palette.$tint-dark;
+        }
+    }
+}

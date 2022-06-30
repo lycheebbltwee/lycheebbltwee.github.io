@@ -1,22 +1,57 @@
 @use "./../partials/palette";
 @use "./../partials/headings";
+@use "./../partials/devices";
+
+:root {
+    font-size: 16px;
+}
 
 * {
     font-family: interstate-mono, monospace;
     font-weight: 300;
     font-style: normal;
-    font-size: 18px;
 }
 
+p,
+li {
+    @include devices.phone {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+    }
+    @include devices.laptop {
+        font-size: 1.375rem;
+        line-height: 2rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav li {
+    font-size: 1.125rem;
+}
+
+// the main headings for each page (i.e., h1)
 .topheading {
     font-family: quincy-cf, serif;
     font-weight: 800;
     font-style: normal;
     color: palette.$primary-color;
-    font-size: 140px;
-    line-height: 0.8em;
+
+    @include devices.phone {
+        font-size: 4.7rem;
+        line-height: 4.38rem;
+        text-align: center;
+    }
+
+    @include devices.laptop {
+        font-size: 9.4rem;
+        line-height: 9rem;
+    }
 }
 
+// The description text for each page will be in red
 .top__para {
     color: palette.$primary-color;
 }
@@ -25,6 +60,17 @@
     color: palette.$primary-color;
 }
 
+// Subsequent headings on the website will be two-tone (if applicable)
 .subheading {
     @include headings.two-tone;
+}
+
+// Footer text
+.footer {
+    &__para {
+        font-size: 0.85rem;
+        line-height: 1.2rem;
+        text-align: center;
+        color: palette.$tint-light;
+    }
 }

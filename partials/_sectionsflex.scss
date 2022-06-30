@@ -1,0 +1,15 @@
+@use "./../partials/devices";
+
+@mixin div($lw, $rw) {
+    &__left-div {
+        @include devices.tablet {
+            width: $lw;
+        }
+    }
+
+    &__right-div {
+        @include devices.tablet {
+            width: $rw;
+        }
+    }
+}

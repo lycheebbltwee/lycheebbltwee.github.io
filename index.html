@@ -32,12 +32,46 @@
             </nav>
         </header>
 
+        <aside class="sidebar">
+            <a
+                href="https://www.linkedin.com/in/designedasthuy/"
+                class="sidebar__anchor"
+                ><img
+                    src="/images/icons/icons8-linkedin-512.png"
+                    alt="May be the word in inside a box"
+                    class="sidebar__img"
+                />
+            </a>
+            <a
+                href="https://github.com/lycheebbltwee"
+                class="sidebar__anchor sidebar__anchor--github"
+                ><img
+                    src="/images/icons/icons8-github-512.png"
+                    alt="May be a cat inside a circle"
+                    class="sidebar__img"
+            /></a>
+            <a
+                href="https://instagram.com/designed_asthuy"
+                class="sidebar__anchor sidebar__anchor--mail"
+                ><img
+                    src="/images/icons/icons8-instagram-512.png"
+                    alt="May be a camera inside a box"
+                    class="sidebar__img"
+            /></a>
+            <div class="sidebar__line"></div>
+        </aside>
+
         <main>
             <section class="top">
-                <div class="left-div">
+                <div class="top__left-div">
                     <h1 class="topheading">
                         Anh Thuy <br />
                         Nguyen
+                        <img
+                            src="/images/lychee.png"
+                            alt="May be an illustration of a lychee"
+                            class="topheading__img"
+                        />
                     </h1>
                     <p class="top__para">[ahn • twee • n'win]</p>
                     <ul class="top__list">
@@ -47,7 +81,7 @@
                     </ul>
                 </div>
 
-                <div class="right-div">
+                <div class="top__right-div">
                     <img
                         src="/images/Self_Portrait_.png"
                         alt="May be a girl drawn with red"
@@ -57,7 +91,7 @@
             </section>
 
             <section class="about">
-                <div class="left-div">
+                <div class="about__left-div">
                     <h2 class="subheading">
                         <span class="subheading subheading--accent-color">
                             I'm _
@@ -68,20 +102,17 @@
                     <p class="about__para">
                         As I am, right here, and right now.
                     </p>
-                    <button class="btn">
-                        <a href="about.html" class="second-section__link"
-                            >Find out more</a
-                        >
+                    <button class="btn about__btn">
+                        <a href="about.html" class="btn__link">Find out more</a>
                     </button>
                 </div>
 
-                <div class="right-div">
+                <div class="about__right-div">
                     <img
                         src="/images/icons/icons8-adobe-indesign-512.png"
                         alt="May be the letters I and d in a box"
                         class="about__img"
-                    />
-                    <img
+                    /><img
                         src="/images/icons/icons8-adobe-photoshop-512.png"
                         alt="May be the letters P and s in a box"
                         class="about__img"
@@ -117,43 +148,25 @@
                     <br />
                     what I've worked on.
                 </h2>
+                <div class="projects__gallery">
+                    <img src="" alt="" class="projects__img" />
+                    <img
+                        src="./images/design-project-01.png"
+                        alt="May be a print spread with a quote and an illustration"
+                        class="projects__img"
+                    />
+                </div>
+                <button class="btn">
+                    <a href="projects.html" class="btn__link">Find out more</a>
+                </button>
             </section>
         </main>
-        <aside class="sidebar">
-            <a
-                href="https://www.linkedin.com/in/designedasthuy/"
-                class="sidebar__anchor"
-            >
-                <img
-                    src="/images/icons/icons8-linkedin-512.png"
-                    alt="May be the word in inside a box"
-                    class="sidebar__img"
-                />
-            </a>
-            <a
-                href="https://github.com/lycheebbltwee"
-                class="sidebar__anchor sidebar__anchor--github"
-            >
-                <img
-                    src="/images/icons/icons8-github-512.png"
-                    alt="May be a cat inside a circle"
-                    class="sidebar__img"
-                />
-            </a>
-            <a
-                href="https://instagram.com/designed_asthuy"
-                class="sidebar__anchor sidebar__anchor--mail"
-            >
-                <img
-                    src="/images/icons/icons8-instagram-512.png"
-                    alt="May be a camera inside a box"
-                    class="sidebar__img"
-                />
-            </a>
-        </aside>
-        <footer>
-            <p class="footer__para">Anh Thuy Nguyen. Copyright 2022.</p>
-            <p class="footer__para">Icons from Icons8</p>
+
+        <footer class="footer">
+            <p class="footer__para">
+                Anh Thuy Nguyen &copy;<span id="copyright">2022</span>.
+            </p>
+            <p class="footer__para">Icons from Icons8.</p>
         </footer>
     </body>
 </html>

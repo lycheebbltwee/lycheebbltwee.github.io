@@ -1,0 +1,22 @@
+@use "./../partials/devices";
+
+html,
+body {
+    max-width: 100vw;
+}
+
+main {
+    margin: 0 auto;
+
+    @include devices.phone {
+        width: 95%;
+    }
+
+    @include devices.large-phone {
+        width: 95%;
+    }
+
+    @include devices.tablet {
+        width: 90%;
+    }
+}

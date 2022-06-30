@@ -1,0 +1,29 @@
+@use "./../partials/devices";
+@use "./../partials/palette";
+
+.sidebar {
+    @include devices.tablet {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-right: 1.5rem;
+    }
+
+    &__anchor {
+        display: inline-block;
+        height: 100%;
+    }
+
+    &__img {
+        height: 3.125rem;
+    }
+
+    &__line {
+        height: 10rem;
+        border-right: 2px solid palette.$accent-color;
+        margin-right: 1.5rem;
+    }
+}
