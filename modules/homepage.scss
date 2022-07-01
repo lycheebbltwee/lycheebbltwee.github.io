@@ -6,7 +6,17 @@
 // TOP SECTION
 .top {
     // Padding-top to move away from top of page
-    padding-top: 11.25rem;
+    @include devices.phone {
+        padding-top: 10.7rem;
+    }
+
+    @include devices.large-phone {
+        padding-top: 10.7rem;
+    }
+
+    @include devices.tablet {
+        padding-top: 11.25rem;
+    }
 
     // Div widths
     @include sectionsflex.div(60%, 30%);
@@ -21,31 +31,62 @@
     }
 
     &__para {
+        @include devices.phone {
+            margin-bottom: 3rem;
+        }
+
+        @include devices.large-phone {
+            margin-bottom: 3rem;
+        }
+
         @include devices.tablet {
             margin-bottom: 5rem;
         }
     }
 
+    &__list {
+        margin-left: 1.5rem;
+
+        @include devices.phone {
+            display: inline-block;
+            max-width: 60vw;
+        }
+    }
+
     // Right side of section
     &__img {
-        height: 40.6rem;
-        margin: -2.5rem auto 0;
+        @include devices.phone {
+            height: 25.6rem;
+            padding-left: 11rem;
+            margin-top: -16rem;
+        }
+
+        @include devices.tablet {
+            height: 40.6rem;
+            margin: -2.5rem auto 0;
+        }
     }
 }
 
 // Styling for heading
 .topheading {
     @include devices.phone {
-        height: 11.25rem;
+        margin-bottom: 1rem;
+    }
+
+    @include devices.large-phone {
+        margin-bottom: 1rem;
     }
 
     &__img {
         @include devices.phone {
             visibility: hidden;
+            width: 0;
         }
 
         @include devices.large-phone {
             visibility: hidden;
+            width: 0;
         }
 
         @include devices.tablet {
@@ -66,6 +107,10 @@
 .about {
     background-color: palette.$tint-lightest;
 
+    @include devices.phone {
+        height: 36rem;
+    }
+
     @include devices.tablet {
         height: 25.625rem;
     }
@@ -74,6 +119,15 @@
 
     // Left side of section
     &__left-div {
+        @include devices.phone {
+            margin: 0 1.5rem;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+            justify-content: space-between;
+        }
+
         @include devices.tablet {
             display: flex;
             flex-direction: column;
@@ -83,14 +137,11 @@
     }
 
     &__para {
+        @include devices.phone {
+            margin: 1.25rem 0 16rem;
+        }
         @include devices.tablet {
             margin-bottom: 3.75rem;
-        }
-    }
-
-    &__btn {
-        &:hover {
-            background-color: palette.$tint-light;
         }
     }
 
@@ -100,9 +151,21 @@
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         align-items: center;
+
+        @include devices.phone {
+            width: 80%;
+            row-gap: 1rem;
+            margin: -19.25rem auto 5rem;
+        }
     }
+
     &__img {
-        height: 5.625rem;
+        @include devices.phone {
+            height: 3.5rem;
+        }
+        @include devices.tablet {
+            height: 5.625rem;
+        }
     }
 }
 
@@ -111,15 +174,38 @@
 .projects {
     background-color: palette.$tint-light;
     display: block;
-    padding: 5rem 5%;
+
+    @include devices.phone {
+        padding: 1.5rem;
+    }
+
+    @include devices.tablet {
+        padding: 5rem 5%;
+    }
 
     &__gallery {
         display: flex;
-        justify-content: space-around;
-        margin: 2.2rem 0 3.75rem;
+        height: 28rem;
+
+        @include devices.phone {
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        @include devices.tablet {
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 2.2rem 0 3.75rem;
+        }
     }
 
     &__img {
-        width: 45%;
+        @include devices.phone {
+            width: 100%;
+        }
+
+        @include devices.tablet {
+            width: 45%;
+        }
     }
 }

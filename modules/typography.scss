@@ -14,6 +14,8 @@
 
 p,
 li {
+    color: palette.$accent-color;
+
     @include devices.phone {
         font-size: 1.1rem;
         line-height: 1.8rem;
@@ -40,12 +42,11 @@ a {
     color: palette.$primary-color;
 
     @include devices.phone {
-        font-size: 4.7rem;
-        line-height: 4.38rem;
-        text-align: center;
+        font-size: 4rem;
+        line-height: 3.8rem;
     }
 
-    @include devices.laptop {
+    @include devices.tablet {
         font-size: 9.4rem;
         line-height: 9rem;
     }
@@ -56,13 +57,22 @@ a {
     color: palette.$primary-color;
 }
 
-.top__list {
+.top__list li {
     color: palette.$primary-color;
 }
 
 // Subsequent headings on the website will be two-tone (if applicable)
 .subheading {
     @include headings.two-tone;
+    @include devices.phone {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    @include devices.tablet {
+        font-size: 4.7rem;
+        line-height: 4.5rem;
+    }
 }
 
 // Footer text

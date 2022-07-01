@@ -5,10 +5,12 @@
     font-weight: 800;
     font-style: none;
     color: palette.$primary-color;
-    font-size: 75px;
-    line-height: 0.9em;
 
     &--accent-color {
         color: palette.$accent-color;
+    }
+
+    &--wine-color {
+        color: palette.$tint-dark;
     }
 }

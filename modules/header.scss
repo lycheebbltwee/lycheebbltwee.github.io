@@ -32,12 +32,12 @@ header {
     width: 3.75rem;
 
     @include devices.phone {
-        margin: 1.25rem auto;
+        margin: 1.25rem;
         height: 3.75rem;
     }
 
     @include devices.large-phone {
-        margin: 1.25rem auto;
+        margin: 1.25rem;
         height: 3.75rem;
     }
 

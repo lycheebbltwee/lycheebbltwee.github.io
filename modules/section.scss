@@ -2,6 +2,8 @@
 
 // General sections
 section {
+    border-radius: 20px;
+
     @include devices.phone {
         display: block;
         margin-bottom: 1.2rem;

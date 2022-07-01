@@ -1,32 +1,21 @@
 @use "./../partials/palette";
+@use "./../partials/devices";
 
 .btn {
     background-color: palette.$accent-color;
     color: palette.$lightest;
     border: none;
     border-radius: 50px;
-
     height: 70px;
-    width: 320px;
-    transition: 0.2s;
-
-    &:link {
-        color: palette.$lightest;
-    }
-
-    &:visited {
-        color: palette.$lightest;
-    }
-
-    &:hover {
-        background-color: palette.$tint-lightest;
-    }
 
     &__link {
-        padding: 25px 52px;
-        border-radius: 25px;
-        font-size: 22px;
+        display: inline-block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 21.5px 0;
+        font-size: 1.375rem;
         transition: 0.2s;
+        vertical-align: middle;
 
         &:link {
             color: palette.$lightest;
@@ -42,6 +31,36 @@
 
         &:active {
             color: palette.$tint-dark;
+        }
+    }
+
+    &--pink-hover {
+        &:hover {
+            background-color: palette.$tint-light;
+        }
+    }
+
+    &--light-pink-hover {
+        &:hover {
+            background-color: palette.$tint-lightest;
+        }
+    }
+
+    @include devices.phone {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    @include devices.tablet {
+        width: 320px;
+        transition: 0.2s;
+
+        &:link {
+            color: palette.$lightest;
+        }
+
+        &:visited {
+            color: palette.$lightest;
         }
     }
 }
