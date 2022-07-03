@@ -51,6 +51,11 @@
         margin: 0 auto;
     }
 
+    @include devices.large-phone {
+        width: 70%;
+        margin: 0 auto;
+    }
+
     @include devices.tablet {
         width: 320px;
         transition: 0.2s;

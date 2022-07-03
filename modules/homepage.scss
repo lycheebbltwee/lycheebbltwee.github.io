@@ -51,6 +51,11 @@
             display: inline-block;
             max-width: 60vw;
         }
+
+        @include devices.large-phone {
+            display: inline-block;
+            max-width: 60vw;
+        }
     }
 
     // Right side of section
@@ -59,6 +64,12 @@
             height: 25.6rem;
             padding-left: 11rem;
             margin-top: -16rem;
+        }
+
+        @include devices.large-phone {
+            height: 35rem;
+            padding-left: 15rem;
+            margin-top: -18rem;
         }
 
         @include devices.tablet {
@@ -81,12 +92,12 @@
     &__img {
         @include devices.phone {
             visibility: hidden;
-            width: 0;
+            height: 0;
         }
 
         @include devices.large-phone {
             visibility: hidden;
-            width: 0;
+            height: 0;
         }
 
         @include devices.tablet {
@@ -111,6 +122,10 @@
         height: 36rem;
     }
 
+    @include devices.large-phone {
+        height: 34rem;
+    }
+
     @include devices.tablet {
         height: 25.625rem;
     }
@@ -120,6 +135,15 @@
     // Left side of section
     &__left-div {
         @include devices.phone {
+            margin: 0 1.5rem;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+            justify-content: space-between;
+        }
+
+        @include devices.large-phone {
             margin: 0 1.5rem;
             padding-top: 1.5rem;
             display: flex;
@@ -140,6 +164,11 @@
         @include devices.phone {
             margin: 1.25rem 0 16rem;
         }
+
+        @include devices.large-phone {
+            margin: 1.25rem 0 17rem;
+        }
+
         @include devices.tablet {
             margin-bottom: 3.75rem;
         }
@@ -157,12 +186,23 @@
             row-gap: 1rem;
             margin: -19.25rem auto 5rem;
         }
+
+        @include devices.large-phone {
+            width: 70%;
+            row-gap: 1rem;
+            margin: -20rem auto 5rem;
+        }
     }
 
     &__img {
         @include devices.phone {
             height: 3.5rem;
         }
+
+        @include devices.large-phone {
+            height: 4rem;
+        }
+
         @include devices.tablet {
             height: 5.625rem;
         }
@@ -173,9 +213,14 @@
 // PROJECTS SECTION
 .projects {
     background-color: palette.$tint-light;
-    display: block;
+    display: flex;
+    flex-direction: column;
 
     @include devices.phone {
+        padding: 1.5rem;
+    }
+
+    @include devices.large-phone {
         padding: 1.5rem;
     }
 
@@ -185,11 +230,17 @@
 
     &__gallery {
         display: flex;
-        height: 28rem;
 
         @include devices.phone {
             flex-direction: column;
             justify-content: space-evenly;
+            height: 28rem;
+        }
+
+        @include devices.large-phone {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 48rem;
         }
 
         @include devices.tablet {
@@ -201,6 +252,10 @@
 
     &__img {
         @include devices.phone {
+            width: 100%;
+        }
+
+        @include devices.large-phone {
             width: 100%;
         }
 

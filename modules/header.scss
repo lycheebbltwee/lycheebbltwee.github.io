@@ -17,6 +17,11 @@ header {
 
     @include devices.large-phone {
         display: block;
+        padding-bottom: 1.875rem;
+        background-image: linear-gradient(
+            palette.$lightest 90%,
+            palette.$opaque
+        );
     }
 
     @include devices.tablet {
