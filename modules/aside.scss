@@ -1,0 +1,104 @@
+@use "./../partials/devices";
+@use "./../partials/palette";
+
+.sidebar {
+    @include devices.phone {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        right: 0;
+        margin: 1.9rem 1.25rem 1.25rem;
+        height: 2.6rem;
+    }
+
+    @include devices.large-phone {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        right: 0;
+        margin: 1.9rem 1.25rem 1.25rem;
+        height: 2.6rem;
+    }
+
+    @include devices.tablet {
+        margin: 0;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        height: 15rem;
+    }
+
+    @include devices.laptop {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-right: 1rem;
+        height: auto;
+    }
+
+    &__anchor {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+
+        @include devices.phone {
+            margin-left: 1.2rem;
+        }
+
+        @include devices.large-phone {
+            margin-left: 1.2rem;
+        }
+
+        @include devices.tablet {
+            margin-left: 0;
+            height: 43%;
+        }
+
+        @include devices.laptop {
+            margin-left: 0;
+        }
+    }
+
+    &__img {
+        @include devices.phone {
+            height: 2.6rem;
+        }
+
+        @include devices.large-phone {
+            height: 2.6rem;
+        }
+
+        @include devices.tablet {
+            height: 2.9rem;
+        }
+
+        @include devices.laptop {
+            height: 3.125rem;
+        }
+    }
+
+    &__line {
+        @include devices.phone {
+            visibility: hidden;
+            border: none;
+        }
+
+        @include devices.tablet {
+            height: 10rem;
+            border-right: 2px solid palette.$accent-color;
+            margin-right: 1.5rem;
+        }
+
+        @include devices.laptop {
+            height: 10rem;
+            border-right: 2px solid palette.$accent-color;
+            margin-right: 1.5rem;
+        }
+    }
+}

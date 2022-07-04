@@ -1,0 +1,318 @@
+@use "./../partials/palette";
+@use "./../partials/devices";
+@use "./../partials/sectionsflex";
+
+//
+// TOP SECTION
+.top {
+    // Padding-top to move away from top of page
+    @include devices.phone {
+        padding-top: 10.7rem;
+    }
+
+    @include devices.large-phone {
+        padding-top: 10.7rem;
+    }
+
+    @include devices.tablet {
+        padding-top: 10.9rem;
+    }
+
+    @include devices.laptop {
+        padding-top: 11.25rem;
+    }
+    // Div widths
+    @include sectionsflex.div(60%, 30%);
+
+    // Left side of section
+    &__left-div {
+        @include devices.tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__para {
+        @include devices.phone {
+            margin-bottom: 3rem;
+        }
+
+        @include devices.large-phone {
+            margin-bottom: 3rem;
+        }
+
+        @include devices.tablet {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__list {
+        margin-left: 1.5rem;
+
+        @include devices.phone {
+            display: inline-block;
+            max-width: 60vw;
+        }
+
+        @include devices.large-phone {
+            display: inline-block;
+            max-width: 60vw;
+        }
+    }
+
+    // Right side of section
+    &__img {
+        @include devices.phone {
+            height: 25.6rem;
+            padding-left: 11rem;
+            margin-top: -16rem;
+        }
+
+        @include devices.large-phone {
+            height: 35rem;
+            padding-left: 15rem;
+            margin-top: -18rem;
+        }
+
+        @include devices.tablet {
+            padding: 0;
+            height: 40rem;
+            margin: 2rem auto 0 -5.5rem;
+        }
+
+        @include devices.laptop {
+            height: 40.6rem;
+            margin: -2.5rem auto 0;
+        }
+    }
+}
+
+// Styling for heading
+.topheading {
+    @include devices.phone {
+        margin-bottom: 1rem;
+    }
+
+    @include devices.large-phone {
+        margin-bottom: 1rem;
+    }
+
+    &__img {
+        @include devices.phone {
+            visibility: hidden;
+            height: 0;
+        }
+
+        @include devices.large-phone {
+            visibility: hidden;
+            height: 0;
+        }
+
+        @include devices.tablet {
+            visibility: visible;
+            height: 4.07rem;
+        }
+
+        @include devices.laptop {
+            &:hover {
+                transform: rotate(10deg);
+            }
+        }
+    }
+}
+
+//
+// ABOUT SECTION
+.about {
+    background-color: palette.$tint-lightest;
+
+    @include devices.phone {
+        height: 36rem;
+    }
+
+    @include devices.large-phone {
+        height: 34rem;
+    }
+
+    @include devices.tablet {
+        height: 25.625rem;
+        padding: 3rem 5%;
+        @include sectionsflex.div(50%, 40%);
+    }
+
+    @include devices.laptop {
+        height: 25.625rem;
+        @include sectionsflex.div(60%, 30%);
+    }
+
+    // Left side of section
+    &__left-div {
+        @include devices.phone {
+            margin: 0 1.5rem;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+            justify-content: space-between;
+        }
+
+        @include devices.large-phone {
+            margin: 0 1.5rem;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+            justify-content: space-between;
+        }
+
+        @include devices.tablet {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+
+        @include devices.laptop {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+    }
+
+    &__para {
+        @include devices.phone {
+            margin: 1.25rem 0 16rem;
+        }
+
+        @include devices.large-phone {
+            margin: 1.25rem 0 17rem;
+        }
+
+        @include devices.tablet {
+            margin-bottom: 3rem;
+        }
+
+        @include devices.laptop {
+            margin-bottom: 3.75rem;
+        }
+    }
+
+    // Right side of section
+    &__right-div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+
+        @include devices.phone {
+            width: 80%;
+            row-gap: 1rem;
+            margin: -19.25rem auto 5rem;
+        }
+
+        @include devices.large-phone {
+            width: 70%;
+            row-gap: 1rem;
+            margin: -20rem auto 5rem;
+        }
+
+        @include devices.tablet {
+            width: inherit;
+            height: 50%;
+            row-gap: 1.5rem;
+            column-gap: 1.25rem;
+            margin: 3rem auto 0;
+        }
+    }
+
+    &__img {
+        @include devices.phone {
+            height: 3.5rem;
+        }
+
+        @include devices.large-phone {
+            height: 4rem;
+        }
+
+        @include devices.tablet {
+            height: 4rem;
+        }
+
+        @include devices.laptop {
+            height: 5.625rem;
+        }
+    }
+}
+
+//
+// PROJECTS SECTION
+.projects {
+    background-color: palette.$tint-light;
+    display: flex;
+    flex-direction: column;
+
+    @include devices.phone {
+        padding: 1.5rem;
+    }
+
+    @include devices.large-phone {
+        padding: 1.5rem;
+    }
+
+    @include devices.tablet {
+        padding: 3rem 5%;
+    }
+
+    &__gallery {
+        display: flex;
+
+        @include devices.phone {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 28rem;
+        }
+
+        @include devices.large-phone {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 48rem;
+        }
+
+        @include devices.tablet {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: auto;
+            align-items: center;
+            margin: 2rem 0 3rem;
+        }
+
+        @include devices.laptop {
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 2.2rem 0 3.75rem;
+        }
+    }
+
+    &__img {
+        @include devices.phone {
+            width: 100%;
+        }
+
+        @include devices.large-phone {
+            width: 100%;
+        }
+
+        @include devices.tablet {
+            width: 80%;
+            margin-bottom: 1rem;
+        }
+
+        @include devices.laptop {
+            width: 45%;
+        }
+    }
+}

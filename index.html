@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/images/favicon/annoh-tnpoo-001.ico" />
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="https://use.typekit.net/xvp0deo.css" />
         <title>Digital Portfolio</title>
@@ -11,7 +12,12 @@
     <body>
         <header>
             <div class="logo">
-                <a class="logo__link" href="index.html"></a>
+                <a class="logo__link" href="index.html">
+                    <img
+                        src="/images/logo_colour.svg"
+                        alt="May be a red lychee with the letter t next to it"
+                    />
+                </a>
             </div>
             <nav class="nav">
                 <ul class="nav__list">
@@ -25,5 +31,149 @@
                 </ul>
             </nav>
         </header>
+
+        <aside class="sidebar">
+            <a
+                href="https://www.linkedin.com/in/designedasthuy/"
+                class="sidebar__anchor"
+                target="_blank"
+                ><img
+                    src="/images/icons/icons8-linkedin-512.png"
+                    alt="May be the word in inside a box"
+                    class="sidebar__img"
+                />
+            </a>
+            <a
+                href="https://github.com/lycheebbltwee"
+                class="sidebar__anchor sidebar__anchor--github"
+                target="_blank"
+                ><img
+                    src="/images/icons/icons8-github-512.png"
+                    alt="May be a cat inside a circle"
+                    class="sidebar__img"
+            /></a>
+            <a
+                href="https://instagram.com/designed_asthuy"
+                class="sidebar__anchor sidebar__anchor--mail"
+                target="_blank"
+                ><img
+                    src="/images/icons/icons8-instagram-512.png"
+                    alt="May be a camera inside a box"
+                    class="sidebar__img"
+            /></a>
+            <div class="sidebar__line"></div>
+        </aside>
+
+        <main>
+            <section class="top">
+                <div class="top__left-div">
+                    <h1 class="topheading">
+                        Anh Thuy <br />
+                        Nguyen
+                        <img
+                            src="/images/lychee.png"
+                            alt="May be an illustration of a lychee"
+                            class="topheading__img"
+                        />
+                    </h1>
+                    <p class="top__para">[ahn • twee • n'win]</p>
+                    <ul class="top__list">
+                        <li>Graphic Designer</li>
+                        <li>_nology Full Stack Developer-in-training</li>
+                        <li>Based in Adelaide</li>
+                    </ul>
+                </div>
+
+                <div class="top__right-div">
+                    <img
+                        src="/images/Self_Portrait_.png"
+                        alt="May be a girl drawn with red"
+                        class="top__img"
+                    />
+                </div>
+            </section>
+
+            <section class="about">
+                <div class="about__left-div">
+                    <h2 class="subheading">
+                        <span class="subheading subheading--accent-color">
+                            I'm _
+                        </span>
+                        <br />
+                        designed as me.
+                    </h2>
+                    <p class="about__para">
+                        As I am, right here, and right now.
+                    </p>
+                    <button class="btn btn--pink-hover">
+                        <a href="about.html" class="btn__link">Find out more</a>
+                    </button>
+                </div>
+
+                <div class="about__right-div">
+                    <img
+                        src="/images/icons/icons8-adobe-indesign-512.png"
+                        alt="May be the letters I and d in a box"
+                        class="about__img"
+                    /><img
+                        src="/images/icons/icons8-adobe-photoshop-512.png"
+                        alt="May be the letters P and s in a box"
+                        class="about__img"
+                    /><img
+                        src="/images/icons/icons8-adobe-illustrator-512.png"
+                        alt="May be the letters A and i in a box"
+                        class="about__img"
+                    /><img
+                        src="/images/icons/icons8-html-5-512.png"
+                        alt="May be a 5 inside an inverted pentagon"
+                        class="about__img"
+                    /><img
+                        src="/images/icons/icons8-css3-512.png"
+                        alt="May be a 3 inside an inverted pentagon"
+                        class="about__img"
+                    /><img
+                        src="/images/icons/icons8-sass-500.png"
+                        alt="May be the word sass in cursive type"
+                        class="about__img"
+                    /><img
+                        src="/images/icons/icons8-merge-git-100.png"
+                        alt="May be two nodes with merging paths into one node"
+                        class="about__img"
+                    />
+                </div>
+            </section>
+
+            <section class="projects">
+                <h2 class="subheading">
+                    <span class="subheading subheading--accent-color">
+                        Here's a sneak peek of
+                    </span>
+                    <br />
+                    what I've worked on.
+                </h2>
+                <div class="projects__gallery">
+                    <img
+                        src="./images/Contact.png"
+                        alt="placeholder image"
+                        class="projects__img"
+                    />
+                    <img
+                        src="./images/design-project-01.png"
+                        alt="May be a print spread with a quote and an illustration"
+                        class="projects__img"
+                    />
+                </div>
+                <button class="btn btn--light-pink-hover">
+                    <a href="projects.html" class="btn__link">Find out more</a>
+                </button>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__para">
+                Anh Thuy Nguyen &copy; <span id="copyright">2022</span>.
+            </p>
+            <p class="footer__para">Icons from Icons8.</p>
+        </footer>
     </body>
 </html>

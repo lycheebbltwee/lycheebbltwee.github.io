@@ -1,0 +1,28 @@
+@use "./../partials/devices";
+
+// General sections
+section {
+    border-radius: 20px;
+
+    @include devices.phone {
+        display: block;
+        margin-bottom: 1.2rem;
+    }
+
+    @include devices.large-phone {
+        display: block;
+        margin-bottom: 1.4rem;
+    }
+
+    @include devices.tablet {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    @include devices.laptop {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+}

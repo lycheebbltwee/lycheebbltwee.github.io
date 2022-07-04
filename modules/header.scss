@@ -8,52 +8,65 @@ header {
 
     @include devices.phone {
         display: block;
+        padding-bottom: 1.875rem;
+        background-image: linear-gradient(
+            palette.$lightest 90%,
+            palette.$opaque
+        );
     }
 
     @include devices.large-phone {
         display: block;
+        padding-bottom: 1.875rem;
+        background-image: linear-gradient(
+            palette.$lightest 90%,
+            palette.$opaque
+        );
     }
 
     @include devices.tablet {
         display: flex;
         justify-content: space-between;
+        height: 9%;
+        background-image: linear-gradient(palette.$lightest, palette.$opaque);
+    }
+
+    @include devices.laptop {
+        display: flex;
+        justify-content: space-between;
         height: 13%;
+        background-image: linear-gradient(palette.$lightest, palette.$opaque);
     }
 }
 
+// logo is left aligned, unless on small screen which it is centered
 .logo {
-    width: 60px;
+    width: 3.75rem;
 
     @include devices.phone {
-        margin: 20px auto;
-        height: 60px;
+        margin: 1.25rem;
+        height: 3.75rem;
     }
 
     @include devices.large-phone {
-        margin: 20px auto;
-        height: 60px;
+        margin: 1.25rem;
+        height: 3.75rem;
     }
 
     @include devices.tablet {
         margin: 0;
-        margin-left: 20px;
-        height: 100%;
+        margin-left: 0.75rem;
+        height: 3.75rem;
     }
 
     &__link {
         display: inline-block;
         width: 100%;
-        height: 100%;
-        background-image: url(/images/logo_colour.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-
-        &:hover {
-            background-image: url(/images/logo_colour2.svg);
-        }
+        height: 3.75rem;
     }
 }
 
+// navigation items should take up one third of the viewport, unless on small screen
 .nav {
     @include devices.phone {
         width: 100%;
@@ -66,19 +79,19 @@ header {
     @include devices.tablet {
         width: calc(100% / 12 * 6);
         height: 100%;
-        margin-right: 20px;
+        margin-right: 1.25rem;
     }
 
     @include devices.laptop {
         width: calc(100% / 12 * 4);
         height: 100%;
-        margin-right: 20px;
+        margin-right: 1.25rem;
     }
 
     @include devices.desktop {
         width: calc(100% / 12 * 3);
         height: 100%;
-        margin-right: 20px;
+        margin-right: 1.25rem;
     }
 
     li {
@@ -97,9 +110,11 @@ header {
 
     &__item {
         display: inline-block;
-        text-align: center;
-        box-sizing: border-box;
+        vertical-align: top;
         padding: 5%;
+        border-bottom: 2px solid transparent;
+        transition: 0.2s;
+        color: palette.$primary-color;
 
         &:link {
             text-decoration: none;
@@ -108,6 +123,10 @@ header {
         }
 
         @include devices.laptop {
+            &:visited {
+                color: palette.$primary-color;
+            }
+
             &:hover {
                 border-bottom: 2px solid palette.$accent-color;
                 color: palette.$accent-color;
@@ -116,21 +135,13 @@ header {
             &:active {
                 color: palette.$accent-color;
             }
-
-            &:visited {
-                color: palette.$primary-color;
-            }
         }
     }
 }
 
-.menu {
-    @include devices.phone {
-        background-image: url(/images/bars-solid.svg);
-        width: 60px;
-        height: 60px;
-        background-size: 45px 45px;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+// When the user is on a specific page
+#currentPage {
+    border-bottom: 2px solid palette.$accent-color;
+    color: palette.$accent-color;
+    padding: 5%;
 }
