@@ -59,6 +59,7 @@
     @include devices.tablet {
         width: 630px;
         transition: 0.2s;
+        margin: 0;
 
         &:link {
             color: palette.$lightest;
