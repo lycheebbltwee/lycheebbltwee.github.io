@@ -18,6 +18,10 @@ main {
     }
 
     @include devices.tablet {
+        width: 87%;
+    }
+
+    @include devices.laptop {
         width: 90%;
     }
 }

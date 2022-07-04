@@ -21,6 +21,17 @@
     }
 
     @include devices.tablet {
+        margin: 0;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        height: 15rem;
+    }
+
+    @include devices.laptop {
         position: fixed;
         right: 0;
         bottom: 0;
@@ -45,6 +56,11 @@
 
         @include devices.tablet {
             margin-left: 0;
+            height: 43%;
+        }
+
+        @include devices.laptop {
+            margin-left: 0;
         }
     }
 
@@ -58,6 +74,10 @@
         }
 
         @include devices.tablet {
+            height: 2.9rem;
+        }
+
+        @include devices.laptop {
             height: 3.125rem;
         }
     }

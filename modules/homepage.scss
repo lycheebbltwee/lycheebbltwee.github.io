@@ -15,9 +15,12 @@
     }
 
     @include devices.tablet {
-        padding-top: 11.25rem;
+        padding-top: 10.9rem;
     }
 
+    @include devices.laptop {
+        padding-top: 11.25rem;
+    }
     // Div widths
     @include sectionsflex.div(60%, 30%);
 
@@ -73,6 +76,12 @@
         }
 
         @include devices.tablet {
+            padding: 0;
+            height: 40rem;
+            margin: 2rem auto 0 -5.5rem;
+        }
+
+        @include devices.laptop {
             height: 40.6rem;
             margin: -2.5rem auto 0;
         }
@@ -128,9 +137,14 @@
 
     @include devices.tablet {
         height: 25.625rem;
+        padding: 3rem 5%;
+        @include sectionsflex.div(50%, 40%);
     }
 
-    @include sectionsflex.div(60%, 30%);
+    @include devices.laptop {
+        height: 25.625rem;
+        @include sectionsflex.div(60%, 30%);
+    }
 
     // Left side of section
     &__left-div {
@@ -153,6 +167,15 @@
         }
 
         @include devices.tablet {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+
+        @include devices.laptop {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -170,6 +193,10 @@
         }
 
         @include devices.tablet {
+            margin-bottom: 3rem;
+        }
+
+        @include devices.laptop {
             margin-bottom: 3.75rem;
         }
     }
@@ -192,6 +219,14 @@
             row-gap: 1rem;
             margin: -20rem auto 5rem;
         }
+
+        @include devices.tablet {
+            width: inherit;
+            height: 50%;
+            row-gap: 1.5rem;
+            column-gap: 1.25rem;
+            margin: 3rem auto 0;
+        }
     }
 
     &__img {
@@ -204,6 +239,10 @@
         }
 
         @include devices.tablet {
+            height: 4rem;
+        }
+
+        @include devices.laptop {
             height: 5.625rem;
         }
     }
@@ -225,7 +264,7 @@
     }
 
     @include devices.tablet {
-        padding: 5rem 5%;
+        padding: 3rem 5%;
     }
 
     &__gallery {
@@ -244,6 +283,14 @@
         }
 
         @include devices.tablet {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: auto;
+            align-items: center;
+            margin: 2rem 0 3rem;
+        }
+
+        @include devices.laptop {
             flex-direction: row;
             justify-content: space-around;
             margin: 2.2rem 0 3.75rem;
@@ -260,6 +307,11 @@
         }
 
         @include devices.tablet {
+            width: 80%;
+            margin-bottom: 1rem;
+        }
+
+        @include devices.laptop {
             width: 45%;
         }
     }

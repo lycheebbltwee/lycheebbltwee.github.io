@@ -57,6 +57,19 @@
     }
 
     @include devices.tablet {
+        width: 630px;
+        transition: 0.2s;
+
+        &:link {
+            color: palette.$lightest;
+        }
+
+        &:visited {
+            color: palette.$lightest;
+        }
+    }
+
+    @include devices.laptop {
         width: 320px;
         transition: 0.2s;
 

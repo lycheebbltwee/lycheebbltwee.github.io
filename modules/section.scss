@@ -17,7 +17,12 @@ section {
     @include devices.tablet {
         display: flex;
         justify-content: center;
-        padding: 5rem 0;
+        margin-bottom: 2rem;
+    }
+
+    @include devices.laptop {
+        display: flex;
+        justify-content: center;
         margin-bottom: 4rem;
     }
 }

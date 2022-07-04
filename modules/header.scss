@@ -27,6 +27,13 @@ header {
     @include devices.tablet {
         display: flex;
         justify-content: space-between;
+        height: 9%;
+        background-image: linear-gradient(palette.$lightest, palette.$opaque);
+    }
+
+    @include devices.laptop {
+        display: flex;
+        justify-content: space-between;
         height: 13%;
         background-image: linear-gradient(palette.$lightest, palette.$opaque);
     }
