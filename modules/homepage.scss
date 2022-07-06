@@ -124,7 +124,7 @@
 
 //
 // ABOUT SECTION
-.about {
+.home-about {
     background-color: palette.$tint-lightest;
 
     @include devices.phone {
@@ -250,7 +250,7 @@
 
 //
 // PROJECTS SECTION
-.projects {
+.home-projects {
     background-color: palette.$tint-light;
     display: flex;
     flex-direction: column;

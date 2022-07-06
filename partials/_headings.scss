@@ -3,7 +3,7 @@
 @mixin two-tone {
     font-family: quincy-cf, serif;
     font-weight: 800;
-    font-style: none;
+    font-style: normal;
     color: palette.$primary-color;
 
     &--accent-color {

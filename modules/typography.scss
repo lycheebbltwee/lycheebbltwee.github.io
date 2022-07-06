@@ -71,6 +71,18 @@ a {
 // The description text for each page will be in red
 .top__para {
     color: palette.$primary-color;
+
+    @include devices.phone {
+        max-width: 90vw;
+    }
+
+    @include devices.large-phone {
+        max-width: 90vw;
+    }
+
+    @include devices.laptop {
+        max-width: 40vw;
+    }
 }
 
 .top__list li {
@@ -98,6 +110,17 @@ a {
     @include devices.laptop {
         font-size: 4.7rem;
         line-height: 4.5rem;
+    }
+
+    &--bottom-margin {
+        margin-bottom: 2rem;
+    }
+}
+
+// Text in About page
+.about {
+    &__para {
+        margin-bottom: 1.8rem;
     }
 }
 

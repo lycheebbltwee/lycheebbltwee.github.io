@@ -1,0 +1,87 @@
+@use "./../partials/devices";
+@use "./../partials/palette";
+@use "./../partials/sectionsflex";
+
+.about-top {
+    &__img {
+        width: 100%;
+        border-radius: 10%;
+    }
+}
+
+.about {
+    background-color: palette.$tint-lightest;
+
+    @include devices.phone {
+        padding: 2rem 3%;
+
+        &__left-div {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @include devices.large-phone {
+        padding: 3rem 2%;
+
+        &__left-div {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @include devices.tablet {
+        @include sectionsflex.div(30%, 60%);
+
+        &__left-div {
+            margin-bottom: 0;
+        }
+    }
+
+    @include devices.laptop {
+        @include sectionsflex.div(45%, 50%);
+        justify-content: space-evenly;
+        padding: 3rem 5%;
+    }
+
+    &__left-div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__line {
+        border-top: 2.5px solid palette.$primary-color;
+        width: 65%;
+        margin: 2.5rem auto 0;
+
+        @include devices.tablet {
+            width: 40%;
+        }
+
+        @include devices.laptop {
+            width: 65%;
+        }
+    }
+
+    &__img {
+        &--big {
+            @include devices.phone {
+                height: 5rem;
+                width: 5rem;
+            }
+
+            @include devices.large-phone {
+                height: 5rem;
+                width: 5rem;
+            }
+
+            @include devices.tablet {
+                height: 6rem;
+                width: 6rem;
+            }
+
+            @include devices.laptop {
+                height: 7rem;
+                width: 7rem;
+            }
+        }
+    }
+}
