@@ -1,0 +1,175 @@
+@use "./../partials/devices";
+@use "./../partials/palette";
+@use "./../partials/sectionsflex";
+
+.projects-top {
+    @include sectionsflex.div(100%, 100%);
+
+    @include devices.phone {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include devices.large-phone {
+        flex-direction: column;
+    }
+
+    @include devices.laptop {
+        flex-direction: row;
+    }
+
+    &__left-div {
+        @include devices.laptop {
+            width: 60%;
+        }
+    }
+
+    &__right-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include devices.phone {
+            height: 10rem;
+            justify-content: space-between;
+        }
+
+        @include devices.large-phone {
+            height: 10rem;
+            justify-content: space-between;
+        }
+
+        @include devices.laptop {
+            width: 30%;
+            height: auto;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+.projects {
+    background-color: palette.$tint-light;
+    display: block;
+
+    @include devices.phone {
+        padding: 2rem 3%;
+    }
+
+    @include devices.large-phone {
+        padding: 3rem 2%;
+    }
+
+    @include devices.laptop {
+        padding: 3rem 5%;
+    }
+}
+
+.projects-gallery {
+    display: grid;
+    row-gap: 2rem;
+
+    justify-items: center;
+
+    @include devices.phone {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+    @include devices.large-phone {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+    @include devices.tablet {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.img-container {
+    @include devices.phone {
+        width: 100%;
+    }
+
+    @include devices.large-phone {
+        width: 100%;
+    }
+
+    @include devices.tablet {
+        width: 100%;
+    }
+
+    @include devices.laptop {
+        width: 40vw;
+        height: 22rem;
+        overflow: clip;
+    }
+
+    &--span2 {
+        @include devices.phone {
+            width: 100%;
+        }
+
+        @include devices.large-phone {
+            width: 100%;
+        }
+
+        @include devices.tablet {
+            grid-row: 2 / span 2;
+        }
+
+        @include devices.desktop {
+            height: 44rem;
+            width: 40vw;
+            overflow: clip;
+        }
+    }
+
+    &--overlay {
+        color: palette.$accent-color;
+        width: inherit;
+        height: inherit;
+
+        @include devices.laptop {
+            transition: 0.2s;
+            position: absolute;
+            color: rgba(0, 0, 0, 0);
+
+            &:hover {
+                background-color: rgba(244, 166, 160, 0.85);
+                color: palette.$accent-color;
+            }
+        }
+    }
+
+    &__text {
+        display: block;
+
+        @include devices.phone {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        @include devices.large-phone {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        @include devices.laptop {
+            margin: 2rem;
+            width: 35%;
+        }
+    }
+}
+
+.graphics {
+    &__img {
+        @include devices.phone {
+            max-width: 100%;
+        }
+
+        @include devices.large-phone {
+            max-width: 100%;
+        }
+    }
+}
