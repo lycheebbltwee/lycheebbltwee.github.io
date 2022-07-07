@@ -5,6 +5,7 @@ header {
     align-items: center;
     width: 100%;
     position: fixed;
+    z-index: 50;
 
     @include devices.phone {
         display: block;
