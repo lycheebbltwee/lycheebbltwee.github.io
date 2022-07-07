@@ -1190,3 +1190,82 @@ section {
     max-width: 100%;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .contact-top {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .contact-top {
+    flex-direction: row;
+    height: 67vh;
+    overflow-y: hidden;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .contact-top__left-div {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .contact-top__left-div {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .contact-top__container {
+    height: 60vh;
+    overflow: clip;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .contact-top__container {
+    height: 60vh;
+    width: 87vw;
+    overflow: clip;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .contact-top__container {
+    height: 60rem;
+    width: 45rem;
+  }
+}
+.contact-top__img {
+  margin-top: -5rem;
+}
+@media only screen and (max-width: 600px) {
+  .contact-top__img {
+    margin-left: -12rem;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .contact-top__img {
+    margin-left: -12rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .contact-top__img {
+    margin-left: -7rem;
+  }
+}
+.contact-top__right-div {
+  margin-top: 3rem;
+}
+.contact-top__right-div button {
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .contact-top__right-div {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .contact-top__right-div {
+    width: 30%;
+  }
+}
+.contact-top__para {
+  margin-bottom: 2rem;
+}
