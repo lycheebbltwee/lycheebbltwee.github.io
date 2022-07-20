@@ -101,7 +101,7 @@
 
     @include devices.laptop {
         width: 40vw;
-        height: 22rem;
+        height: 28rem;
         overflow: clip;
     }
 
@@ -119,7 +119,7 @@
         }
 
         @include devices.desktop {
-            height: 44rem;
+            height: 58rem;
             width: 40vw;
             overflow: clip;
         }
@@ -129,6 +129,8 @@
         color: palette.$accent-color;
         width: inherit;
         height: inherit;
+        display: flex;
+        justify-content: space-between;
 
         @include devices.laptop {
             transition: 0.2s;
@@ -144,6 +146,7 @@
 
     &__text {
         display: block;
+        height: max-content;
 
         @include devices.phone {
             width: 100%;
@@ -159,17 +162,41 @@
             margin: 2rem;
             width: 35%;
         }
+
+        & p {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__logos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: max-content;
+        margin: 2rem;
+    }
+
+    &__img {
+        width: 3rem;
+        height: 3rem;
+        margin-left: 1rem;
     }
 }
 
 .graphics {
     &__img {
         @include devices.phone {
-            max-width: 100%;
+            height: 102%;
+            min-width: 100%;
         }
 
         @include devices.large-phone {
-            max-width: 100%;
+            height: 102%;
+            min-width: 100%;
+        }
+
+        &--left-margin {
+            margin: 0 -2rem;
         }
     }
 }
