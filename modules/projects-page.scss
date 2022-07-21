@@ -131,11 +131,13 @@
         height: inherit;
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         @include devices.laptop {
             transition: 0.2s;
             position: absolute;
             color: rgba(0, 0, 0, 0);
+            align-items: flex-start;
 
             &:hover {
                 background-color: rgba(244, 166, 160, 0.85);
@@ -186,17 +188,22 @@
 .graphics {
     &__img {
         @include devices.phone {
-            height: 102%;
-            min-width: 100%;
+            width: 100%;
         }
 
         @include devices.large-phone {
-            height: 102%;
-            min-width: 100%;
+            width: 100%;
+        }
+
+        @include devices.laptop {
+            height: 100%;
+            width: auto;
         }
 
         &--left-margin {
-            margin: 0 -2rem;
+            @include devices.laptop {
+                margin: 0 -2rem;
+            }
         }
     }
 }

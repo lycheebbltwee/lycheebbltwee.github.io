@@ -1148,12 +1148,14 @@ section {
   height: inherit;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 @media only screen and (min-width: 992px) {
   .img-container--overlay {
     transition: 0.2s;
     position: absolute;
     color: rgba(0, 0, 0, 0);
+    align-items: flex-start;
   }
   .img-container--overlay:hover {
     background-color: rgba(244, 166, 160, 0.85);
@@ -1200,18 +1202,24 @@ section {
 
 @media only screen and (max-width: 600px) {
   .graphics__img {
-    height: 102%;
-    min-width: 100%;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 600px) {
   .graphics__img {
-    height: 102%;
-    min-width: 100%;
+    width: 100%;
   }
 }
-.graphics__img--left-margin {
-  margin: 0 -2rem;
+@media only screen and (min-width: 992px) {
+  .graphics__img {
+    height: 100%;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .graphics__img--left-margin {
+    margin: 0 -2rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
