@@ -2,6 +2,8 @@
 
 This is a digital portfolio showcasing my work as a graphic designer and a developer-in-training.
 
+<img src="./images/development-project-00.png" alt="May be a screenshot of portfolio home" height="200">
+
 ## Planning
 
 When starting this project, I thought it would be best to start off with a digital prototype to design my portfolio site.
