@@ -48,7 +48,7 @@ a {
 }
 
 .topheading {
-  font-family: quincy-cf, serif;
+  font-family: lust, serif;
   font-weight: 800;
   font-style: normal;
   color: #e72348;
@@ -102,8 +102,8 @@ a {
 }
 
 .subheading {
-  font-family: quincy-cf, serif;
-  font-weight: 800;
+  font-family: lust, serif;
+  font-weight: 700;
   font-style: normal;
   color: #e72348;
 }
@@ -776,7 +776,7 @@ section {
 }
 .home-about__right-div {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
 }
@@ -820,7 +820,7 @@ section {
 }
 @media only screen and (min-width: 992px) {
   .home-about__img {
-    height: 5.625rem;
+    height: 4.5rem;
   }
 }
 
@@ -895,7 +895,8 @@ section {
 }
 @media only screen and (min-width: 992px) {
   .home-projects__img {
-    width: 45%;
+    height: 20vh;
+    width: auto;
   }
 }
 
@@ -1300,3 +1301,5 @@ section {
 .contact-top__para {
   margin-bottom: 2rem;
 }
+
+/*# sourceMappingURL=styles.css.map */

@@ -204,7 +204,7 @@
     // Right side of section
     &__right-div {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         justify-items: center;
         align-items: center;
 
@@ -243,7 +243,7 @@
         }
 
         @include devices.laptop {
-            height: 5.625rem;
+            height: 4.5rem;
         }
     }
 }
@@ -312,7 +312,8 @@
         }
 
         @include devices.laptop {
-            width: 45%;
+            height: 20vh;
+            width: auto;
         }
     }
 }
