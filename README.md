@@ -12,10 +12,10 @@ I thought I would also take the opportunity to not just think of this as a portf
 
 This is what I came up after designing:
 
-<img src="./images/homepage.png" alt="May be a homepage design" width="200">
-<img src="./images/about-me.png" alt="May be a about me page design" width="200">
-<img src="./images/projects.png" alt="May be a projects page design" width="200">
-<img src="./images/contact.png" alt="May be a contact page design" width="200">
+<img src="./images/Homepage.png" alt="May be a homepage design" width="200">
+<img src="./images/About-Me.png" alt="May be a about me page design" width="200">
+<img src="./images/Projects.png" alt="May be a projects page design" width="200">
+<img src="./images/Contact.png" alt="May be a contact page design" width="200">
 
 ## Implementation
 
